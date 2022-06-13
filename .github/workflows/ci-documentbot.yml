@@ -29,7 +29,6 @@ on:
 
 jobs:
   label:
-    if: ${{ github.repository == 'apache/pulsar' }}
     permissions:
       pull-requests: write 
     runs-on: ubuntu-latest
@@ -37,7 +36,7 @@ jobs:
       - name: Checkout action
         uses: actions/checkout@v3
         with:
-          repository: apache/pulsar-test-infra/docbot
+          repository: apache/pulsar-test-infra
           ref: master
 
       - name: Set up Go
