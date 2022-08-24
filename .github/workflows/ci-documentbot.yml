@@ -28,7 +28,7 @@ on:
       - unlabeled
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.pull_request.number }}
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
