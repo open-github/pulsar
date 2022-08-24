@@ -28,12 +28,12 @@ on:
       - unlabeled
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
   label:
-    if: ${{ github.repository == 'apache/pulsar' }}
+    #if: ${{ github.repository == 'apache/pulsar' }}
     permissions:
       pull-requests: write 
     runs-on: ubuntu-latest
