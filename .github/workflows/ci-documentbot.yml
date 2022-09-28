@@ -37,7 +37,6 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{toJSON(github)}}
       - name: Labeling
         uses: open-github/pulsar-test-infra/docbot@master
         env:
@@ -50,5 +49,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Validating PR Title
-        uses: apache/pulsar-test-infra/docbot/cmd/title-check@master
+        uses: open-github/pulsar-test-infra/docbot/cmd/title-check@master
         
