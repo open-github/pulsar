@@ -50,4 +50,6 @@ jobs:
     steps:
       - name: Validating PR Title
         uses: open-github/pulsar-test-infra/docbot/cmd/title-check@master
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
